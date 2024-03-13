@@ -49,15 +49,15 @@ data=[
 collection.insert_many(data)
 
 
-# Total no.of records
-# agg_result=collection.aggregate(
-#     [{
-#         "$group" :
-#         {"_id" : "$Subject",
-#          "Total Subject" : {"$sum":1}}
+Total no.of records
+agg_result=collection.aggregate(
+    [{
+        "$group" :
+        {"_id" : "$Subject",
+         "Total Subject" : {"$sum":1}}
          
-#     }]
-# )
-# for i in agg_result:
-#     print(i)
-#     import datetime as datetime
+    }]
+)
+for i in agg_result:
+    print(i)
+    import datetime as datetime
